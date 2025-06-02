@@ -1,0 +1,22 @@
+{
+    "name": "colombia/barranquilla",
+    "description": "Este es un tema que representa la tienda de Barranquilla",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.2.0||~8.3.0",
+        "magento/framework": "*",
+        "magento/theme-frontend-blank": "*"
+    },
+    "type": "magento2-theme",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}

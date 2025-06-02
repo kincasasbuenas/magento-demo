@@ -1,0 +1,21 @@
+@button-primary__background: orange;
+@background-top-header: red;
+@color-top-header: white;
+
+@import '_extend-child';
+
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .page-header .panel.wrapper {
+        background-color: @background-top-header;
+        color: @color-top-header;
+
+        a {
+            color: @color-top-header;
+        }
+    }
+}
+
+
