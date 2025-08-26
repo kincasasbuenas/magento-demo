@@ -1,0 +1,81 @@
+// Definición de variables de color
+@color-gray80: #cccccc;
+@color-gray94: #f0f0f0;
+@color-gray98: #fafafa;
+@color-gray90: #e5e5e5;
+@color-gray60: #999999;
+@color-gray34: #575757;
+@color-white: #fff;
+@color-black: #000;
+
+.accordion {
+    margin: 2rem auto;
+    max-width: 100%;
+    border: 1px solid @color-gray80;
+    border-radius: 6px;
+    background: @color-white;
+    box-shadow: 0 2px 8px 0 fade(@color-black, 8%);
+    padding: 1rem;
+
+    [data-role="collapsible"] {
+        border: 1px solid @color-gray80;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        background: @color-gray98;
+
+        // Separación visual entre elementos
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        // Cuando está abierto, cambia a icono de menos
+        &.active [data-role="trigger"]::after {
+            content: '-';
+            font-size: 1.8rem;
+        }
+    }
+
+    [data-role="trigger"] {
+        cursor: pointer;
+        padding: 1rem 2.5rem 1rem 1rem;
+        background: @color-gray94;
+        transition: background 0.2s;
+        position: relative;
+        min-height: 32px;
+
+        h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: @color-gray34;
+        }
+
+        // Icono de más (por defecto cerrado)
+        &::after {
+            content: '+';
+            font-size: 1.8rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: @color-gray60;
+            transition: transform 0.2s;
+        }
+
+        
+
+        &:hover {
+            background: @color-gray90;
+        }
+    }
+
+    
+
+    [data-role="content"] {
+        padding: 1rem;
+        background: @color-white;
+        color: @color-gray34;
+        font-size: 1rem;
+        border-top: 1px solid @color-gray90;
+        border-radius: 0 0 4px 4px;
+    }
+}
