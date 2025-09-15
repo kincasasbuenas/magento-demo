@@ -1,4 +1,4 @@
-<div class="breadcrumbs" id="breadcrumbs-example"></div>
+
 <h1>JQuery Widgets Magento 2</h1>
 <p>Bienvenido a la página de demostración de JQuery Widgets en Magento 2.</p>
 
@@ -50,37 +50,3 @@
 }
 </script>
 
-
-
-<script>
-    require([
-        'jquery',
-        'Magento_Theme/js/model/breadcrumb-list',
-        'breadcrumbs'
-    ], function ($, breadcrumbList) {
-        'use strict';
-
-        const breadcrumbs = [
-            {
-                'name': 'some-page-1',
-                'link': '/some/path/1',
-                'title': 'Link title for page 1',
-                'label': 'Some page 1'
-            },
-            {
-                'name': 'some-page-1',
-                'link': '/some/path/2',
-                'title': 'Link title for page 1',
-                'label': 'Some page 2'
-            }
-        ];
-
-        // adding breadcrumbs to the Breadcrumb List
-        breadcrumbs.forEach(function (breadcrumb) {
-            breadcrumbList.push(breadcrumb);
-        });
-
-        // Breadcrumbs widget initialization
-        $('#breadcrumbs-example').breadcrumbs();
-    });
-</script>
