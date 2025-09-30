@@ -18,10 +18,28 @@
 
     <div data-role="collapsible">
         <div data-role="trigger">
-            <h4>Title 2</h4>
+            <h4>Widget Tabs | Magento 2</h4>
         </div>
     </div>
-    <div data-role="content"> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <div data-role="content"> 
+        <div class="product data items"
+            data-mage-init='{"Kinuz_JQWidgets/js/tabs": {}}'>
+            <div class="item title" data-role="collapsible">
+                <a class="switch" data-toggle="trigger" href="#tab-cars">Cars</a>
+            </div>
+            <div id="tab-cars" class="item content" data-role="content">Cars content</div>
+
+            <div class="item title" data-role="collapsible">
+                <a class="switch" data-toggle="trigger" href="#tab-movies">Movies</a>
+            </div>
+            <div id="tab-movies" class="item content" data-role="content">Movies content</div>
+
+            <div class="item title" data-role="collapsible">
+                <a class="switch" data-toggle="trigger" href="#tab-music">Music</a>
+            </div>
+            <div id="tab-music" class="item content" data-role="content">Music Content</div>
+        </div>
+    </div>
 
     <div data-role="collapsible">
         <div data-role="trigger">
