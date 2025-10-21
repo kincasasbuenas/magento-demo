@@ -43,10 +43,26 @@
 
     <div data-role="collapsible">
         <div data-role="trigger">
-            <h4>Title 3</h4>
+            <h4>Form Rules</h4>
         </div>
     </div>
-    <div data-role="content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
+    <div data-role="content">
+        <form class="form" id="my-form" method="post" data-mage-init='{"validation": {}}'>
+            <input name="example" id="example" title="Example" value="" type="text" class="integer required"/>
+            <br>
+            <br>
+            <input name="letters" id="letters" title="letters" value="" type="text" class="letters-only required"/>
+            <br>
+            <br>
+            <input name="password" id="password" title="Field 3" type="text" data-validate="{'validate-admin-password':true, required: true}"/>
+            <input name="confirmation" id="confirmation" title="Field 3" type="text" data-validate="{'validate-cpassword':true, required: true}"/>
+            <br>
+            <br>
+            <button type="submit" title="Submit" class="action submit primary">
+                <span>Submit</span>
+            </button>
+        </form>
+    </div>
 </div>
 
 <script type="text/x-magento-init">
