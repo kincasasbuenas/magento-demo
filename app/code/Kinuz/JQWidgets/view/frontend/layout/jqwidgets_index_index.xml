@@ -21,5 +21,6 @@
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="kinuz_jqwidgets" template="Kinuz_JQWidgets::index.phtml"/>
         </referenceContainer>
+        <referenceBlock name="report.bugs" display="false"/>
     </body>
 </page>
