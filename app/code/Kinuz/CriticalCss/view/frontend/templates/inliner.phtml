@@ -1,0 +1,19 @@
+<?php
+/** @var \Kinuz\CriticalCss\Block\Inliner $block */
+$cssContent = $block->getCriticalCssContent();
+?>
+
+<?php if ($cssContent): ?>
+<style data-critical="true">
+    <?= /* @noEscape */ $cssContent ?>
+</style>
+<?php endif; ?>
+
+<link rel="stylesheet" type="text/css" media="print" onload="this.media='all'" href="<?= $block->getViewFileUrl('css/styles-m.css') ?>" />
+<link rel="stylesheet" type="text/css" media="print" onload="this.media='screen and (min-width: 768px)'" href="<?= $block->getViewFileUrl('css/styles-l.css') ?>" />
+
+
+<noscript>
+    <link rel="stylesheet" type="text/css" href="<?= $block->getViewFileUrl('css/styles-m.css') ?>" />
+    <link rel="stylesheet" type="text/css" href="<?= $block->getViewFileUrl('css/styles-l.css') ?>" media="screen and (min-width: 768px)" />
+</noscript>
